@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* ---------- base styles ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #333;
+    background-color: #cfcfcf;
+    background-image: url(images/bg.png);
+    background-size: 10px 10px;
+}
+/* ---------- end base styles ---------- */
+:root{
+    --accent-color: #ff6b02;
+}
+.header{
+    height: 100px;
+    background-color: #647193;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+.logo img{
+    width: 100%;
+}
+.title{
+    color: #ffffff;
+}
+.title span{
+    font-style: italic;
+    color: var(--accent-color);
+}
+.text{
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-color: #e1e1e1;
+}
+
+.intro .container{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.intro__text {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-indent: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.intro__accent {
+    background-color: rgba(255, 107, 2, 0.6);
+    border-radius: 8px;
+}
+.intro-list{
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+.intro-list__item{
+    padding-left: 30px;
+    position: relative;
+}
+.intro-list__item:not(:last-child){
+    margin-bottom: 10px;
+}
+.intro-list__item:first-child::before{
+    content: '1.';
+}
+.intro-list__item:last-child::before {
+    content: '2.';
+}
+.intro-list__item:first-child::before, .intro-list__item:last-child::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--accent-color);
+}
+
+.warning{
+    padding: 30px;
+    margin-top: 20px;
+    border: 6px solid red;
+}
+
+.warning h2{
+    margin-bottom: 30px;
+    color: red;
+}
+.warning p{
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-indent: 20px;
+    color: var(--accent-color);
+}
+
+/* -------------------- input:range ------------------ */
+.result .container{
+    padding-top: 50px;
+}
+.range-box{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid var(--accent-color);
+    border-radius: 8px;
+}
+.range-wrapper {
+    width: 300px;
+    /*  width input range */
+    position: relative;
+}
+
+/* input[type="range"] */
+ {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    /* Override default look in Firefox */
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    /* убрать нижний отступ инлайн элемента  */
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input:range - стилізація</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+        <h1 class="title"> Кроссбраузерна стилізація <span>input:range</span></h1>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <p class="intro__text">
+                    Стилізація елементів форм - давня проблема в веб-розробці. Різні браузери по різному відображають поля вводу, радіо-кнопки, чекбокси та інші елементи форм. До цього часу виробники браузерів не дійшли до спільного рішення цього питання. Навіть з'явилося чимало прихильників ідеї, що й не потрібно щось уже міняти  - користувачі Chrome звикли бачити, наприклад чекбокс, саме таким, а користувачі Safari - іншим.
+                </p>
+                <p class="intro__text">
+                    Але погодьтеся: найчастіше(практично завжди) дефолтні стилі елементів форм потрібно змінювати, щоб вони відповідали стилістиці сайту, задумці дизайнера і цей дизайн відображався однаково у всіх браузерах.  
+                </p>
+                <p class="intro__text">
+                    На сьогоднішній день існує 2 способи, як привести елементи форм до однакового вигляду у всіх браузерах:
+                </p>
+                <ol class="intro-list">
+                    <li class="intro-list__item">використання вендорних префіксів (для кожного браузера свої)</li>
+                    <li class="intro-list__item">приховування стандартних елементів, і накладання поверх них кастомних</li>
+                </ol>
+                <p class="intro__text intro__accent">
+                    В цій статті я розгляну 2 варіанти на прикладі кастомізації input:range - діапазону значень з можливістю, пересуваючи
+                    повзунок, вибирати значення між заданими мінімальним та максимальним значеннями діапазону.
+                </p>
+
+                <div class="warning">
+                    <h2>Дописати при можливості статтю!!!</h2>
+                    <p>Нижче буде 2 чекбокси, код яких я буду дивитись на github, коли буде потрібно верстати кастомні повзунки
+                        input:range</p>
+                </div>
+            </div>
+        </section>
+        <section class="result">
+            <div class="container">
+                <div class="range-box">
+                    <p class="text">Приклад 1</p>
+                    <p class="text">Дефолтний повзунок (thumb), оформлений через ::-webkit-slider-thumb та ::-moz-range-thumb </p>
+                    <div class="range-wrapper">
+                        <!-- thumb-position = value / max * 100% = 25 / 100 * 100% = 25%
+                                     - потрібно для CSS -- ширина .progress, позиція тумби(повзунка) якщо він кастомний -->
+                        <!-- Початкове вказане в розмітці значення .label рівне атрибуту value інпута. В даному прикладі це 25. -->
+                        <div class="label">25</div>
+                        <input type="range" class="range" name="input-range" value="25" min="0" max="100">
+                        <div class="progress"></div>
+                        <!-- <div class="label"></div> -->
+                    </div>
+                </div>
+                <div class="range-box">
+                    <p class="text">Приклад 2</p>
+                    <p class="text">Кастомний повзунок (thumb), оформлений через спозиціонований над прихованим дефолтним повзунком блок .thumb </p>
+                    <div class="range-wrapper">
+                        <!-- thumb-position = value / max * 100% = 25 / 100 * 100% = 25%
+                                                         - потрібно для CSS -- ширина .progress, позиція тумби(повзунка) якщо він кастомний -->
+                        <!-- Початкове вказане в розмітці значення .label рівне атрибуту value інпута. В даному прикладі це 25. -->
+                        <div class="label">25</div>
+                        <input type="range" class="range" name="input-range" value="25" min="0" max="100">
+                        <div class="progress"></div>
+                        <!-- <div class="label"></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
