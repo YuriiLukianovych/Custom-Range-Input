@@ -140,11 +140,18 @@ body {
     text-indent: 20px;
     color: var(--accent-color);
 }
-
-/* -------------------- input:range ------------------ */
+/* ************************************************************************** */
+/********** !!!!!!!!!! ------- input:range styles -------- !!!!!!!!! *********/
+/* ************************************************************************** */
 .result .container{
     padding-top: 50px;
 }
+.result__title{
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+
 .range-box{
     padding: 10px;
     margin-bottom: 10px;
@@ -158,7 +165,7 @@ body {
 }
 
 /* input[type="range"] */
- {
+.range {
     -webkit-appearance: none;
     /* Override default look */
     appearance: none;
@@ -168,4 +175,49 @@ body {
     width: 100%;
     display: block;
     /* убрать нижний отступ инлайн элемента  */
+}
+
+/* input range = track + thumb */
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #c0c0c0;
+    height: 16px;
+    border-radius: 8px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background-color: #c0c0c0;
+    height: 16px;
+    border-radius: 8px;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    /* Centers thumb on the track */
+    /* margin-top=(track height in pixels / 2) - (thumb height in pixels /2) */
+    margin-top: -4px;
+    background-color: #ff6b02;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    /*Removes extra border that FF applies*/
+    border-radius: 0;
+    /*Removes default border-radius that FF applies*/
+    /* In Firefox no need to center thumb - thumb centered by defoult */
+    background-color: #ff6b02;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
 }

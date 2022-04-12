@@ -43,12 +43,38 @@
                     <p>Нижче буде 2 чекбокси, код яких я буду дивитись на github, коли буде потрібно верстати кастомні повзунки
                         input:range</p>
                 </div>
+                <div class="warning">
+                    <h3>WebKit/Blink (Chrome/Opera/Safari):</h3>
+                    <ul>
+                        <li>::-webkit-slider-thumb { /* Styles the thumb of the input*/ }</li>
+                        <li>::-webkit-slider-runnable-track { /* Styles the track of the input*/ }</li> 
+                    </ul>
+                    <br>
+                    <br>
+                    <h3>Firefox</h3>
+                    <ul>
+                        <li>::-moz-range-thumb { /* Styles the thumb of the input*/ }</li>
+                        <li>::-moz-range-track { /* Styles the track of the input*/ }</li>
+                        <li>::-moz-range-progress { /* Styles the progress/fill below the thumb of the input*/ }</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <h3>IE/Edge</h3>
+                    <ul>
+                        <li>::-ms-thumb { /* Styles the thumb of the input*/ }</li>
+                        <li>::-ms-track { /* Styles the track of the input*/ }</li>
+                        <li>::-ms-fill-lower { /* Styles the progress/fill below the thumb */ }</li>
+                        <li>::-ms-fill-upper { /* Styles the fill above the thumb */ }</li>
+                    </ul>
+                    <br>
+                    <br>
+                </div>
             </div>
         </section>
         <section class="result">
             <div class="container">
                 <div class="range-box">
-                    <p class="text">Приклад 1</p>
+                    <h2 class="result__title">Приклад 1</h2>
                     <p class="text">Дефолтний повзунок (thumb), оформлений через ::-webkit-slider-thumb та ::-moz-range-thumb </p>
                     <div class="range-wrapper">
                         <!-- thumb-position = value / max * 100% = 25 / 100 * 100% = 25%
@@ -61,7 +87,7 @@
                     </div>
                 </div>
                 <div class="range-box">
-                    <p class="text">Приклад 2</p>
+                    <h2 class="result__title">Приклад 2</h2>
                     <p class="text">Кастомний повзунок (thumb), оформлений через спозиціонований над прихованим дефолтним повзунком блок .thumb </p>
                     <div class="range-wrapper">
                         <!-- thumb-position = value / max * 100% = 25 / 100 * 100% = 25%
