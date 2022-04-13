@@ -78,29 +78,36 @@
                     <p class="text">Дефолтний повзунок (thumb), оформлений через ::-webkit-slider-thumb та ::-moz-range-thumb </p>
                     <div class="range-wrapper">
                         <!-- thumb-position = value / max * 100% = 25 / 100 * 100% = 25%
-                                     - потрібно для CSS -- ширина .progress, позиція тумби(повзунка) якщо він кастомний -->
-                        <!-- Початкове вказане в розмітці значення .label рівне атрибуту value інпута. В даному прикладі це 25. -->
-                        <div class="label">25</div>
+                                     - потрібно для CSS -- ширина .range-progress, позиція тумби(повзунка) якщо він кастомний -->
+                        
+                        
                         <input type="range" class="range" name="input-range" value="25" min="0" max="100">
-                        <div class="progress"></div>
-                        <!-- <div class="label"></div> -->
+                        <div class="range-progress"></div>
+                        <!-- Початкове вказане в розмітці значення .range-label рівне атрибуту value інпута. В даному прикладі це 25. -->
+                        <div class="range-label"><span>25</span></div>
+                        <!-- <div class="range-thumb"></div> -->
                     </div>
                 </div>
                 <div class="range-box">
                     <h2 class="result__title">Приклад 2</h2>
-                    <p class="text">Кастомний повзунок (thumb), оформлений через спозиціонований над прихованим дефолтним повзунком блок .thumb </p>
+                    <p class="text">Кастомний повзунок (thumb), оформлений через спозиціонований 
+                        над прихованим дефолтним повзунком блок .range-thumb </p>
                     <div class="range-wrapper">
                         <!-- thumb-position = value / max * 100% = 25 / 100 * 100% = 25%
-                                                         - потрібно для CSS -- ширина .progress, позиція тумби(повзунка) якщо він кастомний -->
-                        <!-- Початкове вказане в розмітці значення .label рівне атрибуту value інпута. В даному прикладі це 25. -->
-                        <div class="label">25</div>
-                        <input type="range" class="range" name="input-range" value="25" min="0" max="100">
-                        <div class="progress"></div>
-                        <!-- <div class="label"></div> -->
+                            - потрібно для CSS -- ширина .range-progress, позиція тумби(повзунка) якщо він кастомний -->
+                        
+                        <input type="range" class="range range2" name="input-range" value="25" min="0" max="100">
+                        <div class="range-progress range-progress2"></div>
+                        <!-- Початкове вказане в розмітці значення .range-label рівне атрибуту value інпута. В даному прикладі це 25. -->
+                        <div class="range-label range-label2"><span>25</span></div>
+                        <div class="range-thumb"></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="script1.js" type="module"></script>
+    <script src="script2.js" type="module"></script>
 </body>
 </html>
